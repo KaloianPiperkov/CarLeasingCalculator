@@ -18,19 +18,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let leasePeriodMonths = parseInt(leasePeriod.value) || 0;
         let downPaymentPercentageValue = parseInt(downPayment.value) || 0;
     
-        // Validate car value
         if (carValueAmount < 10000 || carValueAmount > 200000 || isNaN(carValueAmount)) {
-            carValueAmount = 0; // Set default value or handle error
+            carValueAmount = 0; 
         }
     
-        // Validate lease period
         if (leasePeriodMonths < 12 || leasePeriodMonths > 60 || isNaN(leasePeriodMonths)) {
-            leasePeriodMonths = 0; // Set default value or handle error
+            leasePeriodMonths = 0; 
         }
     
-        // Validate down payment percentage
         if (downPaymentPercentageValue < 10 || downPaymentPercentageValue > 50 || isNaN(downPaymentPercentageValue)) {
-            downPaymentPercentageValue = 0; // Set default value or handle error
+            downPaymentPercentageValue = 0; 
         }
     
         const interestRateValue = carTypeValue === 'new' ? 2.99 : 3.7;
@@ -52,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carValue.addEventListener('input', () => {
         let value = parseFloat(carValue.value);
         if (value < 10000 || value > 200000 || isNaN(value)) {
-            carValue.value = ''; // Clear invalid input
+            carValue.value = ''; 
         } else {
             carValueRange.value = value;
         }
@@ -62,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
     carValueRange.addEventListener('input', () => {
         let value = parseFloat(carValueRange.value);
         if (value < 10000 || value > 200000 || isNaN(value)) {
-            carValueRange.value = ''; // Clear invalid input
+            carValueRange.value = ''; 
         } else {
             carValue.value = value;
         }
@@ -76,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
     downPayment.addEventListener('input', () => {
         let value = parseInt(downPayment.value);
         if (value < 10 || value > 50 || isNaN(value)) {
-            downPayment.value = ''; // Clear invalid input
+            downPayment.value = ''; 
         } else {
             downPaymentValue.value = value;
         }
@@ -86,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     downPaymentValue.addEventListener('input', () => {
         let value = parseInt(downPaymentValue.value);
         if (value < 10 || value > 50 || isNaN(value)) {
-            downPaymentValue.value = ''; // Clear invalid input
+            downPaymentValue.value = ''; 
         } else {
             downPayment.value = value;
         }
